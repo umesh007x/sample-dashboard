@@ -1,0 +1,62 @@
+.sidebar {
+  background-color: $color-grey-bg;
+  padding: 5rem 0;
+  width: 19.1%;
+  height: 100vh;
+  position: fixed;
+  z-index: 99999;
+  transition: all 0.5s;
+  @include respond(930px) {
+    display: none;
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    margin-left: 3rem;
+  }
+  &__search {
+    position: relative;
+    width: 5.2rem;
+    height: 5.1rem;
+    border-radius: 50%;
+    background-color: #e17cfd;
+    @include flexCenter;
+    &--gradient {
+      position: absolute;
+      width: 3rem;
+      height: 2.9rem;
+      border-radius: 50%;
+      left: 2rem;
+      top: 0;
+      z-index: 9;
+      background-color: #4cd7f6;
+      filter: blur(11.5px);
+    }
+    & > i {
+      color: #fff;
+      font-size: 2rem;
+      font-weight: 800;
+      z-index: 99;
+    }
+  }
+  &__items {
+    padding-left: 3rem;
+    margin-top: 5rem;
+    &:not(:last-child) {
+      margin-bottom: 8rem;
+    }
+    &--item {
+      @include flexCenter;
+      justify-content: flex-start;
+      padding: 1.5rem 0;
+      cursor: pointer;
+    }
+    &--icon {
+      & > img {
+        width: 100%;
+      }
+      width: 2.5rem;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.active {
+  background-image: linear-gradient(
+    270.27deg,
+    rgba(113, 102, 249, 0.07) 0%,
+    rgba(113, 102, 249, 0.03) 97.77%
+  );
+  border-right: 4px solid rgba(113, 102, 249, 0.5);
+}
+
+.active-day {
+  background-color: #7166f9 !important;
+  color: #fff !important;
+  z-index: 9;
+}
+.BR {
+  &__gradient1 {
+    position: absolute;
+    top: -3rem;
+    left: -2rem;
+    width: 12rem;
+    height: 11rem;
+    border-radius: 50%;
+    background-color: #e17cfd;
+    filter: blur(36px);
+    opacity: 0.9;
+    z-index: 99;
+  }
+  &__gradient2 {
+    position: absolute;
+    bottom: -6rem;
+    right: -5rem;
+    width: 20rem;
+    height: 19rem;
+    border-radius: 50%;
+    background-color: #e17cfd;
+    filter: blur(49.5px);
+    opacity: 0.9;
+    z-index: 99;
+  }
+}
+
+.gradientBG {
+  position: absolute;
+  bottom: -1.5rem;
+  left: 5%;
+  width: 40%;
+  height: 13.74rem;
+  border-radius: 32px;
+  background-color: #e17cfd;
+  filter: blur(23px);
+  opacity: 0.6;
+  z-index: 7;
+}
+.direct {
+  @include flexCenter;
+  & > div {
+    width: 20px;
+    height: 16px;
+    border-radius: 3px;
+    background-color: #4cd7f6;
+    margin-right: 10px;
+  }
+}
+.search {
+  @include flexCenter;
+  & > div {
+    width: 20px;
+    height: 16px;
+    border-radius: 3px;
+    background-color: #e17cfd;
+    margin-right: 10px;
+  }
+}

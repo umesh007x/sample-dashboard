@@ -1,0 +1,387 @@
+.dashboard {
+  display: flex;
+}
+.main {
+  width: 80vw;
+  position: relative;
+  left: 19.1%;
+  padding: 3rem 3.6rem;
+  @include respond(930px) {
+    width: 100vw;
+    left: 0%;
+    padding: 3rem 3rem;
+  }
+  @include respond(500px) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 1rem;
+  }
+  &__header {
+    &__firstRow {
+      @include flexCenter;
+      justify-content: space-between;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #f6f6fb;
+    }
+    &__secondRow {
+      @include flexCenter;
+      justify-content: space-between;
+      margin-top: 4rem;
+      @include respond(730px) {
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+.firstRow {
+  &__contentOne {
+    @include flexCenter;
+    & > img {
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+    }
+    &--logo {
+      & > img {
+        width: 100%;
+      }
+      width: 5.2rem;
+      height: 5rem;
+      background-color: #f6f6fb;
+      padding: 1.2rem;
+      border-radius: 12px;
+      @include flexCenter;
+    }
+    &--dropdown {
+      @include flexCenter;
+      margin: 0 1.2rem;
+      & > div {
+        @include arrowdown;
+        @include flexCenter;
+      }
+    }
+  }
+  &__contentTwo {
+    &--arrow {
+      @include arrowdown;
+      @include flexCenter;
+    }
+    &--logo {
+      & > img {
+        width: 100%;
+      }
+      width: 5.2rem;
+      height: 5rem;
+    }
+    &--dropdown {
+      @include flexCenter;
+      margin: 0 1.2rem;
+      & > div {
+        border-radius: 5px;
+        padding: 0.4rem 0.8rem;
+        @include flexCenter;
+      }
+    }
+  }
+}
+.secondRow {
+  &__contentOne {
+    @include flexCenter;
+    & > img {
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+    }
+    @include respond(730px) {
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__contentTwo {
+    @include flexCenter;
+    @include respond(480px) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    &--days {
+      cursor: pointer;
+      border-radius: 32px;
+      padding: 1rem 2.4rem;
+      background-color: $color-light-grey-bg;
+      transition: all 0.5s;
+      @include respond(480px) {
+        margin-bottom: 1.1rem;
+        padding: 1rem 2.2rem;
+      }
+
+      &:not(:last-child) {
+        margin-right: 1.4rem;
+        @include respond(480px) {
+          margin-right: 1.1rem;
+        }
+      }
+    }
+  }
+}
+
+.visitorcount {
+  display: flex;
+  margin: 2.5rem 0;
+  @include respond(730px) {
+    flex-wrap: wrap;
+  }
+  &__visits {
+    width: 50%;
+    @include respond(730px) {
+      width: 100%;
+    }
+    background-color: $color-light-grey-bg;
+    border-radius: 32px;
+
+    padding: 2.5rem;
+    margin-right: 1.5rem;
+    &--header {
+      @include flexCenter;
+      justify-content: space-between;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #c4c4c4;
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__analytics {
+    width: 50%;
+    @include respond(730px) {
+      width: 100%;
+      margin-top: 1.5rem;
+    }
+    &--row1 {
+      display: flex;
+      position: relative;
+      margin-bottom: 2.5rem;
+      & > div {
+        width: 100%;
+        background-color: $color-light-grey-bg;
+        border-radius: 32px;
+        padding: 3.6rem 1.5rem;
+        padding-bottom: 4.5rem;
+        &:not(:last-child) {
+          margin-right: 1.5rem;
+        }
+      }
+    }
+    &--row2 {
+      display: flex;
+      & > div {
+        width: 100%;
+        background-color: $color-light-grey-bg;
+        border-radius: 32px;
+        padding: 3.6rem 1.5rem;
+        padding-bottom: 4.5rem;
+
+        &:not(:last-child) {
+          margin-right: 1.5rem;
+        }
+      }
+    }
+    &--BR {
+      position: relative;
+      background-color: #4cd7f6 !important;
+      overflow: hidden;
+      z-index: 9;
+    }
+  }
+}
+
+.BR {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 3.2rem;
+    &--icon {
+      width: 2rem;
+      z-index: 999;
+      & > img {
+        width: 100%;
+      }
+    }
+    &--data {
+      @include flexCenter;
+      z-index: 999;
+
+      & > i {
+        margin-bottom: -5px;
+        color: #14ed44;
+        font-size: 1.2rem;
+        margin-right: 6px;
+      }
+      & > p {
+        color: #fff;
+        font-weight: 400;
+        font-size: 1.2rem;
+        font-family: $font-family-roboto;
+      }
+    }
+  }
+  &__data {
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: flex-end;
+
+    & > i {
+      margin-left: auto;
+      margin-right: 6rem;
+      color: #fff;
+      font-size: 1.5rem;
+      z-index: 999;
+      @include respond(1240px) {
+        margin-right: 3rem;
+      }
+    }
+  }
+}
+
+.PPV {
+  &__img {
+    width: 2rem;
+    margin-left: 3.2rem;
+    margin-bottom: 2.5rem;
+    & > img {
+      width: 100%;
+    }
+  }
+  &__content {
+    display: flex;
+    align-items: flex-end;
+    &--icon {
+      width: 1rem;
+      margin-left: auto;
+      margin-right: 6rem;
+      margin-bottom: 1.2rem;
+      @include respond(1240px) {
+        margin-right: 3rem;
+      }
+      & > img {
+        width: 100%;
+      }
+    }
+  }
+}
+.TMV {
+  &__content {
+    margin-top: 2.5rem;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 3.2rem;
+    &--icon {
+      width: 2rem;
+      z-index: 999;
+      & > img {
+        width: 100%;
+      }
+    }
+    &--data {
+      @include flexCenter;
+      z-index: 999;
+
+      & > i {
+        margin-bottom: 2px;
+        color: #fd2e00;
+        font-size: 1.2rem;
+        margin-right: 6px;
+      }
+      & > p {
+        color: #000;
+        font-weight: 400;
+        font-size: 1.2rem;
+        font-family: $font-family-roboto;
+      }
+    }
+  }
+}
+
+.traffic {
+  display: flex;
+  @include respond(750px) {
+    flex-wrap: wrap;
+  }
+  &__tile {
+    width: 50%;
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+      @include respond(750px) {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+      }
+    }
+    @include respond(750px) {
+      width: 100%;
+    }
+    background-color: $color-light-grey-bg;
+    border-radius: 32px;
+    padding: 2.5rem;
+    &--header {
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #c4c4c4;
+      margin-bottom: 1.5rem;
+    }
+    &__content {
+      @include flexCenter;
+      &--left {
+        width: 60%;
+        @include respond(1400px) {
+          width: 50%;
+        }
+      }
+      &--right {
+        width: 40%;
+        padding: 1rem 3.6rem;
+        @include respond(1400px) {
+          padding: 1rem 2rem;
+          width: 50%;
+        }
+        @include respond(930px) {
+          padding: 1rem 10rem;
+        }
+        @include respond(730px) {
+          padding: 1rem 8rem;
+        }
+        @include respond(630px) {
+          padding: 1rem 6rem;
+        }
+        @include respond(550px) {
+          padding: 1rem 4rem;
+        }
+        @include respond(500px) {
+          padding: 1rem 3rem;
+        }
+        @include respond(450px) {
+          padding: 1rem;
+        }
+      }
+      &__dataHeading {
+        background-color: #efeff8;
+        border-radius: 25px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 2px 0;
+      }
+      &__data {
+        margin-top: 1.2rem;
+        &--source {
+          display: flex;
+          justify-content: space-between;
+          @include respond(930px) {
+            justify-content: space-around;
+          }
+          &:not(:last-child) {
+            margin-bottom: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}

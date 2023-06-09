@@ -1,0 +1,20 @@
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin arrowdown {
+  @include flexCenter;
+  cursor: pointer;
+  background-color: #f6f6fb;
+  border-radius: 5px;
+  padding: 0.4rem 0.8rem;
+}
+
+// mobile responsiveness
+@mixin respond($breakpoint) {
+  @media only screen and (max-width: $breakpoint) {
+    @content;
+  }
+}

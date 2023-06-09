@@ -1,0 +1,15 @@
+//   font families
+@import url("https://fonts.googleapis.com/css2?family=Alatsi&family=Neuton:wght@300;400;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+// abstracts
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
+@import "./abstracts/utility";
+
+// base
+@import "./base/base";
+@import "./base/typography";
+
+// components
+@import "./components/dashboard";
+@import "./components/sidebar";
